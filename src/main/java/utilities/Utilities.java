@@ -7,8 +7,8 @@ import java.util.Date;
 public class Utilities {
 
     //Change implicit and page wait time (in seconds)
-    public static final int IMPLICIT_WAIT_TIME = 10;
-    public static final int PAGE_WAIT_TIME = 25;
+    public static final int IMPLICIT_WAIT_TIME = 5;
+    public static final int PAGE_WAIT_TIME = 10;
 
     //Random generators ---------------------------------
     public static String fakerGenerateEmail() {

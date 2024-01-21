@@ -22,7 +22,7 @@ public class MyListeners implements ITestListener {
     public void onTestStart(ITestResult result) {
         String testName = result.getName();
         extentTest = extentReport.createTest(testName);;
-        extentTest.log(Status.INFO,testName+"started executing");
+        extentTest.log(Status.INFO,testName+" started executing");
     }
 
     @Override

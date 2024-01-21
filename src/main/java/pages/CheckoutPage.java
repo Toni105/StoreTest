@@ -19,6 +19,10 @@ public class CheckoutPage {
     //Objects ----------------------------------------
 
     //Buttons
+    @FindBy(xpath = "//*[@id=\"collapse-checkout-option\"]/div/div/div[1]/div[2]/label/input")
+    private WebElement checkoutOptionsGuestCheckout;
+    @FindBy(xpath = "//*[@id=\"button-account\"]")
+    private WebElement continueToCheckoutAsSelectedOption;
     @FindBy(xpath = "//*[@id=\"cart\"]/button")
     private WebElement dropDownCart;
     @FindBy(xpath = "//*[@id=\"cart\"]/ul/li[1]/table/tbody/tr/td[5]/button")
@@ -249,6 +253,11 @@ public class CheckoutPage {
     }
 
     //Combination of action methods ---------------------
+    public void selectAndClickContinueToCheckoutOptionsGuestCheckout() {
+        checkoutOptionsGuestCheckout.click();
+        continueToCheckoutAsSelectedOption.click();
+    }
+
     public void guestFillAllReqFieldsOnlyWithSPACEInStep2_AndClickContinueButton() {
         firstNameFieldAsGuest.sendKeys(Keys.SPACE,Keys.SPACE);
         lastNameFieldAsGuest.sendKeys(Keys.SPACE,Keys.SPACE);

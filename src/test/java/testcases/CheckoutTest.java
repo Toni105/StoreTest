@@ -1,14 +1,16 @@
 package testcases;
 
 import base.BaseTest;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pages.*;
+import pages.CheckoutPage;
+import pages.HomePage;
+import pages.ProductDisplayPage;
+import pages.SearchPage;
 import utilities.Utilities;
 
 public class CheckoutTest extends BaseTest {
@@ -28,8 +30,7 @@ public class CheckoutTest extends BaseTest {
         productDisplayPage = searchPage.clickHPLP3065ProductPage();
         checkoutPage = productDisplayPage.addProductInCartAndGoToCheckout();
         checkoutPage.clickCheckout();
-        driver.findElement(By.xpath("//*[@id=\"collapse-checkout-option\"]/div/div/div[1]/div[2]/label/input")).click();
-        driver.findElement(By.xpath("//*[@id=\"button-account\"]")).click();
+        checkoutPage.selectAndClickContinueToCheckoutOptionsGuestCheckout();
     }
 
     @AfterMethod
@@ -197,10 +198,4 @@ public class CheckoutTest extends BaseTest {
     }
 
     //Coming soon more tests...
-
-
-
-
-
-
 }
