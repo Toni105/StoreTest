@@ -9,16 +9,16 @@ public class AccountSuccessPage {
 
     WebDriver driver;
 
-    //Object -------------------------------
-
-    @FindBy(xpath = "//*[@id=\"content\"]/h1")
-    private WebElement accountSuccessPageHeading;
-
     public AccountSuccessPage(WebDriver driver) {
-
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+
+    //Object -------------------------------
+
+    //Text
+    @FindBy(xpath = "//*[@id=\"content\"]/h1")
+    private WebElement accountSuccessPageHeading;
 
     //Actions methods -----------------------
     public String retrieveAccountSuccessPageHeading() {

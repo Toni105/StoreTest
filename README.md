@@ -1,8 +1,8 @@
 # README: Tutorialsninja Test Automation
 
 ## 🌟 Introduction
-This is Java code for testing the **Tutorialsninja demo e-commerce site**: [https://tutorialsninja.com/demo/index.php](https://tutorialsninja.com/demo/index.php). It's designed to check functionalities like logging in, searching products, and registration.
-Adding items to cart and the checkout process will be added soon.
+This is Java code for testing the **Tutorialsninja demo e-commerce site**: [https://tutorialsninja.com/demo/index.php](https://tutorialsninja.com/demo/index.php). It's designed to check functionalities like logging in, searching products, registration, add to cart, product display page and checkout. 
+Product compare and change password process will be added soon.
 
 ## ⚙️ Setup
 ### Prerequisites:
@@ -17,7 +17,7 @@ git clone https://github.com/Toni105/StoreTest.git
 cd StoreTests
 mvn install
 
-## 🏃 Running only tests
+## 🏃 Running only tests 
 Run the tests using Maven:
 mvn test
 
@@ -29,4 +29,7 @@ Click the play button :)
 - Logging in and out
 - Registration
 - Searching for products
+- Product display page
+- Contact us page
+- Checkout
 - More coming soon...

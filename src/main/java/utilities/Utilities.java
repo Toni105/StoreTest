@@ -8,10 +8,9 @@ public class Utilities {
 
     //Change implicit and page wait time (in seconds)
     public static final int IMPLICIT_WAIT_TIME = 10;
-    public static final int PAGE_WAIT_TIME = 10;
+    public static final int PAGE_WAIT_TIME = 25;
 
     //Random generators ---------------------------------
-
     public static String fakerGenerateEmail() {
         Faker faker = new Faker();
         return faker.internet().emailAddress();
@@ -42,12 +41,15 @@ public class Utilities {
         return faker.address().streetName();
     }
 
-
-    public static String generateEmailWithTimeStamp() {
-        Date date = new Date();
-        String timestamp = date.toString().replace(" ", "_").replace(":", "_");
-        return "first" + timestamp + "@gmail.com";
+    public static String fakerGeneratePostCode() {
+        Faker faker = new Faker();
+        return faker.address().zipCode();
     }
 
+    public static String generatedEmailWithTimeStamp() {
+        Date date = new Date();
+        String timestamp = date.toString().replace(" ", "_").replace(":", "_");
+        return timestamp + fakerGenerateEmail();
+    }
 
 }

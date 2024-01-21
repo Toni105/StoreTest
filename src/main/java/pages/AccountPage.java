@@ -9,30 +9,29 @@ public class AccountPage {
 
     WebDriver driver;
 
-    //Objects -------------------------------
-
-    @FindBy(linkText = "Edit your account information")
-    private WebElement editYourAccountInformationOption;
-
-    @FindBy(css = "aside#column-right>div>a:nth-of-type(13)")
-    private WebElement logOutButton;
-
-    @FindBy(xpath = "//*[@id=\"content\"]/p[1]")
-    private WebElement logOutConfirmMessage;
-
     public AccountPage(WebDriver driver) {
-
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
+    //Objects -------------------------------
+
+    //Buttons
+    @FindBy(linkText = "Edit your account information")
+    private WebElement editYourAccountInformationOption;
+    @FindBy(css = "aside#column-right>div>a:nth-of-type(13)")
+    private WebElement logOutButton;
+
+    //Messages
+    @FindBy(xpath = "//*[@id=\"content\"]/p[1]")
+    private WebElement logOutConfirmMessage;
+
     //Action methods -------------------------
     public boolean getDisplayStatusOfEditYourAccountInformationOption() {
-
         return editYourAccountInformationOption.isDisplayed();
     }
 
-    public void clickLogOutButton() {
+    public void clickLogOut() {
         logOutButton.click();
     }
 
@@ -44,6 +43,5 @@ public class AccountPage {
     public boolean getLogOutConfirmText() {
         return logOutConfirmMessage.isDisplayed();
     }
-
 
 }

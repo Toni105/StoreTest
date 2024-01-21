@@ -9,19 +9,16 @@ public class ForgotPasswordPage {
 
     WebDriver driver;
 
-    //Object -----------------------------------
-
-    @FindBy(xpath = "//h1[text()='Forgot Your Password?']")
-    private WebElement forgotPasswordPageHeading;
-
     public ForgotPasswordPage(WebDriver driver) {
-
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    //Actions methods --------------------------------
+    //Object -----------------------------------
+    @FindBy(xpath = "//h1[text()='Forgot Your Password?']")
+    private WebElement forgotPasswordPageHeading;
 
+    //Actions methods --------------------------------
     public String retrieveForgotPasswordPageHeading() {
         return forgotPasswordPageHeading.getText();
     }
