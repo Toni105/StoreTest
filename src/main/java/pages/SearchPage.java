@@ -123,8 +123,7 @@ public class SearchPage {
         WebElement element = macBookProduct;
 
         Point p = element.getLocation();
-        String actual = ("x=" + p.getX() +", y=" + p.getY());
-        return actual;
+        return ("x=" + p.getX() +", y=" + p.getY());
     }
 
 }

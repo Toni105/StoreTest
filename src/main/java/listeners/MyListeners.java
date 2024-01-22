@@ -8,6 +8,10 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import utilities.ExtentReporter;
 
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+
 public class MyListeners implements ITestListener {
 
     ExtentReports extentReport;
@@ -21,7 +25,7 @@ public class MyListeners implements ITestListener {
     @Override
     public void onTestStart(ITestResult result) {
         String testName = result.getName();
-        extentTest = extentReport.createTest(testName);;
+        extentTest = extentReport.createTest(testName);
         extentTest.log(Status.INFO,testName+" started executing");
     }
 
@@ -48,7 +52,16 @@ public class MyListeners implements ITestListener {
     @Override
     public void onFinish(ITestContext context) {
         extentReport.flush();
-    }
 
+        //Extent Report auto-launching
+        String pathOfExtentReport = System.getProperty("user.dir")+"\\ExtentReports\\extentReport.html";
+        File extentReport = new File(pathOfExtentReport);
+
+        try {
+            Desktop.getDesktop().browse(extentReport.toURI());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

@@ -14,9 +14,7 @@ import pages.SearchPage;
 public class ProductDisplayTest extends BaseTest {
 
     SearchPage searchPage;
-
     HomePage homePage;
-
     ProductDisplayPage productDisplayPage;
     WebDriver driver;
 
@@ -33,7 +31,6 @@ public class ProductDisplayTest extends BaseTest {
     public void tearDown() {
         driver.quit();
     }
-
 
     @Test(priority = 1)
     public void verifyURLofProductPage() {

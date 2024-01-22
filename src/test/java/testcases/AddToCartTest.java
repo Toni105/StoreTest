@@ -10,7 +10,6 @@ import pages.*;
 
 public class AddToCartTest extends BaseTest {
 
-
     WebDriver driver;
     SearchPage searchPage;
     LoginPage loginPage;

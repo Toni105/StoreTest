@@ -13,7 +13,6 @@ import pages.HomePage;
 public class ContactUsTest extends BaseTest {
 
     WebDriver driver;
-
     ContactUsPage contactUsPage;
 
     @BeforeMethod
